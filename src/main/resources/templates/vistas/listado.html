@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Artistas</title>
+</head>
+<body>
+    <h1>Listado de Artistas</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Género Artístico</th>
+            <th>Costo Hora Función</th>
+        </tr>
+        <tr th:each="artista : ${artistas}">
+            <td th:text="${artista.id}"></td>
+            <td th:text="${artista.nombre}"></td>
+            <td th:text="${artista.generoArtistico}"></td>
+            <td th:text="${artista.costoHoraFuncion}"></td>
+        </tr>
+    </table>
+</body>
+</html>
